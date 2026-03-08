@@ -1,9 +1,7 @@
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: list[int], target: int) -> List[List[int]]:
         candidates.sort()
 
-        print(candidates)
-        
         res = []
         subset = []
         
