@@ -25,7 +25,7 @@ var leftRightDifference = function (nums) {
 
 // optimized
 // Time: O(n)
-// Space: O(n) 
+// Space: O(1) 
 
 var leftRightDifference = function (arr) {
     let result = new Array(arr.length).fill(0)
