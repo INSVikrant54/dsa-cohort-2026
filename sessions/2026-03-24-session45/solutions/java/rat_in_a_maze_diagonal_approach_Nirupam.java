@@ -1,3 +1,8 @@
+/*
+    Variations possible on top of "Rat in a Maze" :
+    The rat is allowed to move in diagonal direction as well.
+ */
+
 class Solution {
     public ArrayList<String> ratInMaze(int[][] maze) {
         // code here
