@@ -1,5 +1,5 @@
 /*
-Problem Link: https://leetcode.com/problems/boundary-of-binary-tree/description/
+Problem Link: https://www.geeksforgeeks.org/problems/boundary-traversal-of-binary-tree/1
 */
 
 /**
