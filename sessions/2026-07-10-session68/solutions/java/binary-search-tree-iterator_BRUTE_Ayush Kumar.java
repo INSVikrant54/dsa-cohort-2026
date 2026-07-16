@@ -1,3 +1,6 @@
+import TreeNode;
+
+package solutions.java;
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,51 +17,40 @@
  * }
  */
 class BSTIterator {
-
-    Stack<TreeNode> stack = new Stack<>();
-
+List<Integer> list = new ArrayList<>();
+int index=0;
     public BSTIterator(TreeNode root) {
         
-        TreeNode node = root; 
-        while(node != null)
-        {
-            stack.push(node);
-            node = node.left;
-        }
+        
+        inorder(root,list);
+
     }
     
     public int next() {
         
+        return list.get(index++);
 
-        TreeNode smaller = stack.pop();
-        
-        if(smaller.right != null)
-        {
-            //stack.push(smaller.right);
-            TreeNode node = smaller.right;
-
-            while(node != null)
-            {
-                stack.push(node);
-                node = node.left;
-            }
-        }
-
-        return smaller.val;
     }
     
     public boolean hasNext() {
-
-        if(stack.isEmpty())
-        return false;
-        else
-        return true;
         
+        if(index+1 <= list.size())
+        return true;
+        else 
+        return false;
     }
 
+    public TreeNode inorder(TreeNode node,List<Integer> list)
+    {
+        if(node == null)
+        return null;
 
+        inorder(node.left,list);
+        list.add(node.val);
+        inorder(node.right,list);
 
-
+        return node;
+    }
 }
 
 /**
